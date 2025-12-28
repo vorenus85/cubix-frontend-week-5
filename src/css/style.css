@@ -11,6 +11,7 @@
     --form-input-padding: 5px 10px;
     --link-color: var(--primary-color);
     --link-hover-color: var(--secondary-color);
+    --btn-bg: blue;
 }
 
 * {
@@ -72,6 +73,18 @@ ul {
     gap: 10px;
 }
 
+.form-errors {
+    margin-bottom: 1rem;
+}
+
+.form-errors li {
+    padding: 5px;
+    background: hsl(0, 45%, 67%);
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
 .form-input {
     padding: 5px 10px;
     background: #fff;
@@ -81,9 +94,11 @@ ul {
 }
 
 .btn {
-    background: aqua;
+    background: var(--btn-bg);
     border-radius: 3px;
-    border: 1px solid aqua;
+    border: 1px solid var(--btn-bg);
     min-width: 50px;
     padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
 }

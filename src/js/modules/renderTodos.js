@@ -1,5 +1,8 @@
 import { appEl } from "/src/js/modules/appEl.js";
-import { CLASS_JS_TODO_ITEM } from "/src/js/modules/constants.js";
+import {
+    CLASS_JS_TODO_ITEM,
+    CLASS_JS_TODO_LIST,
+} from "/src/js/modules/constants.js";
 import { todos } from "/src/js/modules/todos.js";
 
 const createTodoRow = () => {
@@ -36,20 +39,25 @@ const createTodoDifficulty = (element) => {
     return difficulty;
 };
 
+export const renderTodo = (element, index) => {
+    const todoUl = document.querySelector("." + CLASS_JS_TODO_LIST);
+    const todoRow = createTodoRow();
+    const checkbox = createTodoCheckbox(element, index);
+    const label = createTodoLabel(element, index);
+    const difficulty = createTodoDifficulty(element);
+
+    todoRow.append(checkbox);
+    todoRow.append(label);
+    label.append(difficulty);
+    todoUl.append(todoRow);
+};
+
 export const renderTodos = () => {
     const todoUl = document.createElement("ul");
-    todoUl.classList.add("todo-list");
+    todoUl.classList.add("todo-list", CLASS_JS_TODO_LIST);
     appEl.prepend(todoUl);
 
     todos.forEach((element, index) => {
-        const todoRow = createTodoRow();
-        const checkbox = createTodoCheckbox(element, index);
-        const label = createTodoLabel(element, index);
-        const difficulty = createTodoDifficulty(element);
-
-        todoRow.append(checkbox);
-        todoRow.append(label);
-        label.append(difficulty);
-        todoUl.append(todoRow);
+        renderTodo(element, index, todoUl);
     });
 };
