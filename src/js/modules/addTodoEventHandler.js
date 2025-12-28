@@ -13,9 +13,10 @@ import {
 } from "/src/js/modules/todoValidation.js";
 
 import { renderTodo } from "/src/js/modules/renderTodos.js";
+import { renderCompletionRate } from "/src/js/modules/renderCompletionRate.js";
 
 export const addTodoEventHandler = () => {
-    document.addEventListener("click", (e) => {
+    document.querySelector(".new-todo-form").addEventListener("click", (e) => {
         e.preventDefault();
 
         const erorrs = document.querySelector("." + CLASS_FROM_ERROR);
@@ -50,6 +51,7 @@ export const addTodoEventHandler = () => {
                 renderTodo(newTodo, todos.length + 1);
                 todoNameEl.value = "";
                 todoDifficultyEl.value = "";
+                renderCompletionRate();
             }
         }
     });

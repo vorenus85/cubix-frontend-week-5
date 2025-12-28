@@ -31,20 +31,12 @@ const createTodoLabel = (element, index) => {
     return label;
 };
 
-const createTodoDifficulty = (element) => {
-    const difficulty = document.createElement("span");
-    difficulty.classList.add("difficulty");
-    difficulty.innerHTML = ` -  ${element.difficulty}`;
-
-    return difficulty;
-};
-
 export const renderTodo = (element, index) => {
     const todoUl = document.querySelector("." + CLASS_JS_TODO_LIST);
     const todoRow = createTodoRow();
     const checkbox = createTodoCheckbox(element, index);
     const label = createTodoLabel(element, index);
-    const difficulty = createTodoDifficulty(element);
+    const difficulty = "- " + element.difficulty;
 
     todoRow.append(checkbox);
     todoRow.append(label);
