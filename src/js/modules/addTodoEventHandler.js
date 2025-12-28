@@ -47,7 +47,7 @@ export const addTodoEventHandler = () => {
                     difficulty: Number(todoDifficultyEl.value),
                 };
 
-                renderTodo(newTodo, todos.length - 1);
+                renderTodo(newTodo, todos.length + 1);
                 todoNameEl.value = "";
                 todoDifficultyEl.value = "";
             }

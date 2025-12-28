@@ -58,6 +58,6 @@ export const renderTodos = () => {
     appEl.prepend(todoUl);
 
     todos.forEach((element, index) => {
-        renderTodo(element, index, todoUl);
+        renderTodo(element, index + 1, todoUl);
     });
 };
