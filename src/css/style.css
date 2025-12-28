@@ -66,3 +66,24 @@ ul {
 .todo-list-item:not(.active) {
     color: red;
 }
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-input {
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #999;
+    min-width: 100px;
+}
+
+.btn {
+    background: aqua;
+    border-radius: 3px;
+    border: 1px solid aqua;
+    min-width: 50px;
+    padding: 5px 10px;
+}
