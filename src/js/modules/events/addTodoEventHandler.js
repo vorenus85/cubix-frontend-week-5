@@ -42,7 +42,7 @@ export const addTodoEventHandler = () => {
             if (!validateResultTodoName && !validateResultTodoDifficulty) {
                 const newTodo = {
                     name: todoNameEl.value,
-                    status: 0,
+                    status: false,
                     difficulty: Number(todoDifficultyEl.value),
                 };
                 todos.push(newTodo);
@@ -52,8 +52,6 @@ export const addTodoEventHandler = () => {
                 todoDifficultyEl.value = "";
                 renderCompletionRate();
             }
-
-            console.log(todos);
         }
     });
 };
