@@ -5,7 +5,6 @@ export const completionRow = () => {
     const completionRow = document.createElement("div");
     completionRow.innerHTML = "Completed:";
     completionRow.classList.add("completion-row");
-    appEl.append(completionRow);
 
     const completionValue = document.createElement("span");
     completionValue.innerHTML = "0";
@@ -17,4 +16,5 @@ export const completionRow = () => {
 
     completionRow.append(completionValue);
     completionRow.append(percentSign);
+    appEl.append(completionRow);
 };

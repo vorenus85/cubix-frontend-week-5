@@ -55,7 +55,7 @@ const renderNewTodoBtn = () => {
 export const newTodoForm = () => {
     const newTodoForm = document.createElement("form");
     newTodoForm.classList.add("new-todo-form");
-    appEl.prepend(newTodoForm);
+    appEl.append(newTodoForm);
     const formRow = document.createElement("div");
     formRow.classList.add("form-row");
     newTodoForm.append(formRow);

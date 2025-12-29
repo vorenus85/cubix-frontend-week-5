@@ -3,7 +3,6 @@ import {
     CLASS_JS_TODO_ITEM,
     CLASS_JS_TODO_LIST,
 } from "/src/js/modules/constants/index.js";
-import { todos } from "/src/js/modules/data/todos.js";
 
 const createDeleteTodoBtn = () => {
     const btn = document.createElement("button");
@@ -45,7 +44,7 @@ export const renderTodo = (element, index) => {
     const todoRow = createTodoRow();
     const checkbox = createTodoCheckbox(element, index);
     const label = createTodoLabel(element, index);
-    const difficulty = "- " + element.difficulty;
+    const difficulty = " - " + element.difficulty;
     const deleteBtn = createDeleteTodoBtn();
 
     todoRow.append(checkbox);
@@ -55,7 +54,7 @@ export const renderTodo = (element, index) => {
     todoRow.append(deleteBtn);
 };
 
-export const renderTodos = () => {
+export const renderTodos = (todos) => {
     const todoUl = document.createElement("ul");
     todoUl.classList.add("todo-list", CLASS_JS_TODO_LIST);
     appEl.prepend(todoUl);

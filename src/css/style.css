@@ -37,10 +37,12 @@ ul {
     max-width: 1200px;
 }
 
+.order-row,
 .most-difficult-row,
 .completion-row {
     font-weight: 800;
     font-size: 1.25rem;
+    margin: 0.5rem 0;
 }
 
 .most-difficult-row span {
@@ -116,4 +118,10 @@ ul {
     border-radius: 25px;
     margin-left: 1rem;
     padding: 5px;
+}
+
+.btn-sort {
+    background: #999;
+    border-color: #999;
+    margin: 0 0.5rem;
 }

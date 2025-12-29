@@ -1,3 +1,5 @@
+import { appEl } from "/src/js/modules/constants/appEl.js";
+
 export const renderMostDifficultRow = () => {
     const el = document.createElement("div");
     el.classList.add("most-difficult-row");
@@ -11,5 +13,5 @@ export const renderMostDifficultRow = () => {
     el.append(text);
     el.append(span);
 
-    document.querySelector(".js-todo-list").after(el);
+    appEl.append(el);
 };
