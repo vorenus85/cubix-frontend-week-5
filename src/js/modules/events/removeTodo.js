@@ -1,3 +1,4 @@
+import { renderMostDifficultTodo } from "/src/js/modules/ui/renderMostDifficultTodo.js";
 import { CLASS_JS_TODO_LIST } from "/src/js/modules/constants/index.js";
 import { todos } from "/src/js/modules/data/todos.js";
 import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
@@ -17,6 +18,7 @@ export const removeTodo = () => {
             todos.splice(actualTodoIndex, 1);
             todoLi.remove();
             renderCompletionRate();
+            renderMostDifficultTodo();
         }
     });
 };

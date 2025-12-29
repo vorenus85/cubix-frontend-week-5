@@ -37,9 +37,16 @@ ul {
     max-width: 1200px;
 }
 
+.most-difficult-row,
 .completion-row {
     font-weight: 800;
     font-size: 1.25rem;
+}
+
+.most-difficult-row span {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 1rem;
 }
 
 .completion-rate {

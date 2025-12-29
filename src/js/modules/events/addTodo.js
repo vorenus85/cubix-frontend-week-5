@@ -53,6 +53,7 @@ export const addTodo = () => {
                 todoNameEl.value = "";
                 todoDifficultyEl.value = "";
                 renderCompletionRate();
+                renderMostDifficultTodo();
             }
         }
     });
