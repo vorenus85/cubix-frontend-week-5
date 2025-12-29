@@ -102,3 +102,11 @@ ul {
     color: #fff;
     cursor: pointer;
 }
+
+.btn-del {
+    background: red;
+    border-color: red;
+    border-radius: 25px;
+    margin-left: 1rem;
+    padding: 5px;
+}

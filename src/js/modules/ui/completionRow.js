@@ -1,7 +1,7 @@
 import { CLASS_COMPLETION_RATE } from "/src/js/modules/constants/index.js";
 import { appEl } from "/src/js/modules/constants/appEl.js";
 
-export const createCompletionRow = () => {
+export const completionRow = () => {
     const completionRow = document.createElement("div");
     completionRow.innerHTML = "Completed:";
     completionRow.classList.add("completion-row");

@@ -48,6 +48,7 @@ const renderNewTodoBtn = () => {
     el.type = "submit";
     el.classList.add("btn", CLASS_ADD_TODO_BTN);
     el.innerHTML = "Save";
+    el.title = "Save new todo";
     return el;
 };
 

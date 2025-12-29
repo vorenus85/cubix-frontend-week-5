@@ -16,7 +16,9 @@ import { renderTodo } from "/src/js/modules/ui/renderTodos.js";
 import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
 
 export const addTodo = () => {
-    document.querySelector(".new-todo-form").addEventListener("click", (e) => {
+    const form = document.querySelector(".new-todo-form");
+
+    form.querySelector(".js-add-todo").addEventListener("click", (e) => {
         e.preventDefault();
 
         const erorrs = document.querySelector("." + CLASS_FROM_ERROR);

@@ -5,6 +5,15 @@ import {
 } from "/src/js/modules/constants/index.js";
 import { todos } from "/src/js/modules/data/todos.js";
 
+const createDeleteTodoBtn = () => {
+    const btn = document.createElement("button");
+    btn.innerHTML = "X";
+    btn.classList.add("btn", "btn-del", "js-del-todo");
+    btn.title = "Delete Todo";
+
+    return btn;
+};
+
 const createTodoRow = () => {
     const todoRow = document.createElement("li");
     todoRow.classList.add("form-group", "todo-list-item");
@@ -37,11 +46,13 @@ export const renderTodo = (element, index) => {
     const checkbox = createTodoCheckbox(element, index);
     const label = createTodoLabel(element, index);
     const difficulty = "- " + element.difficulty;
+    const deleteBtn = createDeleteTodoBtn();
 
     todoRow.append(checkbox);
     todoRow.append(label);
     label.append(difficulty);
     todoUl.append(todoRow);
+    todoRow.append(deleteBtn);
 };
 
 export const renderTodos = () => {
