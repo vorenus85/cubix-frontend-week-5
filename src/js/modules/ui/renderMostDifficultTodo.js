@@ -5,5 +5,5 @@ export const renderMostDifficultTodo = () => {
     const sortedTodos = sortDifficultyDesc(todos);
 
     document.querySelector(".js-most-difficulty-item").innerHTML =
-        sortedTodos[0]?.name;
+        sortedTodos.length ? sortedTodos[0]?.name : "";
 };

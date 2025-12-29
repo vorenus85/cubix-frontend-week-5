@@ -8,6 +8,6 @@ export const calcCompletionRate = () => {
         }
     });
 
-    const result = (completedTask / todos.length) * 100;
+    const result = todos.length ? (completedTask / todos.length) * 100 : "0";
     return result;
 };

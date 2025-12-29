@@ -14,6 +14,7 @@ import {
 import { todos } from "/src/js/modules/data/todos.js";
 import { renderTodo } from "/src/js/modules/ui/renderTodos.js";
 import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
+import { renderMostDifficultTodo } from "/src/js/modules/ui/renderMostDifficultTodo.js";
 
 export const addTodo = () => {
     const form = document.querySelector(".new-todo-form");
