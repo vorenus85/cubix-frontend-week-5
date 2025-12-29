@@ -15,7 +15,7 @@ import { todos } from "/src/js/modules/data/todos.js";
 import { renderTodo } from "/src/js/modules/ui/renderTodos.js";
 import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
 
-export const addTodoEventHandler = () => {
+export const addTodo = () => {
     document.querySelector(".new-todo-form").addEventListener("click", (e) => {
         e.preventDefault();
 
