@@ -27,6 +27,9 @@ const createTodoCheckbox = (element, index) => {
     checkbox.id = "todo_" + index;
     checkbox.value = element.name;
     checkbox.classList.add("form-element", CLASS_JS_TODO_ITEM);
+    if (element.status) {
+        checkbox.checked = true;
+    }
 
     return checkbox;
 };
@@ -42,6 +45,9 @@ const createTodoLabel = (element, index) => {
 export const renderTodo = (element, index) => {
     const todoUl = document.querySelector("." + CLASS_JS_TODO_LIST);
     const todoRow = createTodoRow();
+    if (element.status) {
+        todoRow.classList.add("active");
+    }
     const checkbox = createTodoCheckbox(element, index);
     const label = createTodoLabel(element, index);
     const difficulty = " - " + element.difficulty;
