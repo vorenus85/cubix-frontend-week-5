@@ -3,17 +3,17 @@ import {
     CLASS_NEW_TODO_NAME,
     CLASS_NEW_TODO_DIFFICULTY,
     CLASS_FROM_ERROR,
-    CLASS_JS_TODO_ITEM,
-} from "/src/js/modules/constants.js";
+} from "/src/js/modules/constants/index.js";
 
 import {
     validateTodoName,
     validateTodoDifficulty,
     renderErrMsg,
-} from "/src/js/modules/todoValidation.js";
+} from "/src/js/modules/data/todoValidation.js";
 
-import { renderTodo } from "/src/js/modules/renderTodos.js";
-import { renderCompletionRate } from "/src/js/modules/renderCompletionRate.js";
+import { todos } from "/src/js/modules/data/todos.js";
+import { renderTodo } from "/src/js/modules/ui/renderTodos.js";
+import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
 
 export const addTodoEventHandler = () => {
     document.querySelector(".new-todo-form").addEventListener("click", (e) => {
@@ -31,8 +31,6 @@ export const addTodoEventHandler = () => {
             todoDifficultyEl.value
         );
 
-        const todos = document.querySelectorAll("." + CLASS_JS_TODO_ITEM);
-
         if (e.target.classList.contains(CLASS_ADD_TODO_BTN)) {
             if (validateResultTodoName) {
                 renderErrMsg(validateResultTodoName);
@@ -47,12 +45,15 @@ export const addTodoEventHandler = () => {
                     status: 0,
                     difficulty: Number(todoDifficultyEl.value),
                 };
+                todos.push(newTodo);
 
                 renderTodo(newTodo, todos.length + 1);
                 todoNameEl.value = "";
                 todoDifficultyEl.value = "";
                 renderCompletionRate();
             }
+
+            console.log(todos);
         }
     });
 };

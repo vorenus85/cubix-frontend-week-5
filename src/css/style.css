@@ -80,7 +80,7 @@ ul {
 .form-errors li {
     padding: 5px;
     background: hsl(0, 45%, 67%);
-    margin-bottom: 0;
+    margin-bottom: 1px;
     color: #fff;
     font-size: 14px;
 }

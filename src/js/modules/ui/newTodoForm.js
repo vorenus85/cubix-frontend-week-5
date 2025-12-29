@@ -1,9 +1,9 @@
-import { appEl } from "/src/js/modules/appEl.js";
+import { appEl } from "/src/js/modules/constants/appEl.js";
 import {
     CLASS_NEW_TODO_NAME,
     CLASS_NEW_TODO_DIFFICULTY,
     CLASS_ADD_TODO_BTN,
-} from "/src/js/modules/constants.js";
+} from "/src/js/modules/constants/index.js";
 
 const renderFormElementWrapper = () => {
     const formEl = document.createElement("div");

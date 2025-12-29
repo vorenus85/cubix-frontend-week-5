@@ -1,4 +1,4 @@
-import { CLASS_FROM_ERROR } from "/src/js/modules/constants.js";
+import { CLASS_FROM_ERROR } from "/src/js/modules/constants/index.js";
 
 export const validateTodoName = (name) => {
     let msg = "";

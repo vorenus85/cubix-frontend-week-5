@@ -1,9 +1,9 @@
-import { appEl } from "/src/js/modules/appEl.js";
+import { appEl } from "/src/js/modules/constants/appEl.js";
 import {
     CLASS_JS_TODO_ITEM,
     CLASS_JS_TODO_LIST,
-} from "/src/js/modules/constants.js";
-import { todos } from "/src/js/modules/todos.js";
+} from "/src/js/modules/constants/index.js";
+import { todos } from "/src/js/modules/data/todos.js";
 
 const createTodoRow = () => {
     const todoRow = document.createElement("li");

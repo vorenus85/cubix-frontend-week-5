@@ -1,6 +1,6 @@
-import { CLASS_JS_TODO_ITEM } from "/src/js/modules/constants.js";
+import { CLASS_JS_TODO_ITEM } from "/src/js/modules/constants/index.js";
 
-import { renderCompletionRate } from "/src/js/modules/renderCompletionRate.js";
+import { renderCompletionRate } from "/src/js/modules/ui/renderCompletionRate.js";
 
 export const todoEventHandler = () => {
     document.querySelector(".todo-list").addEventListener("click", (e) => {

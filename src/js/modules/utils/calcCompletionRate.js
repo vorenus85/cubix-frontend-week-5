@@ -1,4 +1,4 @@
-import { CLASS_JS_TODO_ITEM } from "/src/js/modules/constants.js";
+import { CLASS_JS_TODO_ITEM } from "/src/js/modules/constants/index.js";
 
 export const calcCompletionRate = () => {
     let completedTask = 0;
